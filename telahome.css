@@ -1,0 +1,13 @@
+#sidebar{
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: aqua;
+    align-items: center;
+}
+#foto{
+    align-items: center;
+    width: 100%;
+    height: 30%; 
+    justify-content: center;
+}
