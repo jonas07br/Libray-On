@@ -36,6 +36,59 @@
           </div>
         </div>
       </nav>
+      <div class="container-fluid p-5">
+        <div class="row bg-light border border-warning rounded">
+          <div class="col p-5">
+
+            <form method="POST" action="">
+              <div class="row mb-3 justify-content-center">
+                <label for="inputEmail3" name="nomelivro" class="col-sm-2 col-form-label">Nome do Livro</label>
+                <div class="col-sm-4">
+                  <input type="email" class="form-control" id="inputEmail3">
+                </div>
+              </div>
+              <div class="row mb-3 justify-content-center">
+                <label for="inputPassword3" name="autor" class="col-sm-2 col-form-label">Autor</label>
+                <div class="col-sm-4">
+                  <input type="password" class="form-control" id="inputPassword3">
+                </div>
+              </div>
+              <fieldset class="row mb-3 justify-content-center">
+                <legend class="col-form-label col-sm-2 pt-0">Gênero</legend>
+                <div class="col-sm-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="genero" id="gridRadios1" value="Comedia" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                      Comédia
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="genero" id="gridRadios2" value="Romance">
+                    <label class="form-check-label" for="gridRadios2">
+                      Romance
+                    </label>
+                  </div>
+                  <div class="form-check disabled">
+                    <input class="form-check-input" type="checkbox" name="genero" id="gridRadios3" value="Drama">
+                    <label class="form-check-label" for="gridRadios3">
+                      Drama
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="row mb-3 justify-content-center">
+                <div class="col-sm-6 ">
+                  <div class="form-floating">
+                    <textarea class="form-control" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Descrição</label>
+                  </div>
+                </div>  
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
       
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">     
     </body>
