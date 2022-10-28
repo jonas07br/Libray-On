@@ -39,26 +39,25 @@
       <div class="container-fluid p-5">
         <div class="row bg-light border border-warning rounded">
           <div class="col p-5">
-
             <form method="POST" action="">
-              <div class="row mb-3 justify-content-center">
+              <div class="row mb-3 justify-content-center text-center">
                 <label for="inputEmail3" name="nomelivro" class="col-sm-2 col-form-label">Nome do Livro</label>
                 <div class="col-sm-4">
                   <input type="email" class="form-control" id="inputEmail3">
                 </div>
               </div>
-              <div class="row mb-3 justify-content-center">
+              <div class="row mb-3 justify-content-center text-center">
                 <label for="inputPassword3" name="autor" class="col-sm-2 col-form-label">Autor</label>
                 <div class="col-sm-4">
                   <input type="password" class="form-control" id="inputPassword3">
                 </div>
               </div>
-              <fieldset class="row mb-3 justify-content-center">
+              <fieldset class="row mb-3 justify-content-center text-center">
                 <legend class="col-form-label col-sm-2 pt-0">Gênero</legend>
                 <div class="col-sm-4">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="genero" id="gridRadios1" value="Comedia" checked>
-                    <label class="form-check-label" for="gridRadios1">
+                    <input class="form-check-input" type="checkbox" name="genero" id="gridRadios1" value="Comedia">
+                    <label class="form-check-label tex" for="gridRadios1">
                       Comédia
                     </label>
                   </div>
@@ -68,7 +67,7 @@
                       Romance
                     </label>
                   </div>
-                  <div class="form-check disabled">
+                  <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="genero" id="gridRadios3" value="Drama">
                     <label class="form-check-label" for="gridRadios3">
                       Drama
@@ -78,13 +77,14 @@
               </fieldset>
               <div class="row mb-3 justify-content-center">
                 <div class="col-sm-6 ">
-                  <div class="form-floating">
+                  <div class="form-floating mb-2">
                     <textarea class="form-control" id="floatingTextarea"></textarea>
                     <label for="floatingTextarea">Descrição</label>
                   </div>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>  
               </div>
-              <button type="submit" class="btn btn-primary">Enviar</button>
+              
             </form>
           </div>
         </div>
