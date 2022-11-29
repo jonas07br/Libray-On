@@ -8,33 +8,47 @@
         <title>Document</title>
     </head>
     </html>
-    <body background="fundo.png">
+    <body background="imgs/fundo.png">
         <div class="container fluid">
             <div class="row justify-content-center ">
                 <div class="col-sm-6 p-5 border rounded border-warning position-absolute top-50 start-50 translate-middle bg-light border-3"  >
-                    <form method="POST" action="" >
+                    <form method="POST" action="processacadastro.php" >
                         <h1 class="display-3 text-center">Cadastro</h1>
                         <hr>
                         <div class="row mb-3 justify-content-center text-center">
-                            
-                          <label for="inputPassword3" name="email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="text-danger">
+                          <?php
+                            if (isset($_GET["s"])){
+                              if($_GET["s"]=="e"){
+                                echo "<p > Este email já está sendo utilizado.</p>";
+                              }
+                            }
+                          ?>
+                          </div>
+                          <label class="col-sm-2 col-form-label">Nome</label>
                           <div class="col-sm-6">
-                            <input type="text" class="form-control" id="inputPassword3">
+                            <input type="text" name="nome" class="form-control" required>
+                          </div>
+                        </div>
+                        <div class="row mb-3 justify-content-center text-center">  
+                          <label class="col-sm-2 col-form-label">Email</label>
+                          <div class="col-sm-6">
+                            <input type="text" name="email" class="form-control" required>
                           </div>
                         </div>
                         <div class="row mb-3 justify-content-center text-center">
-                          <label for="inputPassword3" name="email" class="col-sm-2 col-form-label">Senha</label>
+                          <label class="col-sm-2 col-form-label">Senha</label>
                           <div class="col-sm-6">
-                            <input type="password" class="form-control" id="inputPassword3">
+                            <input type="text" name="senha" class="form-control" required>
                           </div>
                         </div>
                         <div class="row mb-3 justify-content-end">
                           <div class="col-sm-2">
-                            <button type="submit" class="btn btn-primary">OK</button>
+                            <button type="submit" name="cadastrar" class="btn btn-primary">OK</button>
                           </div>
                         </div>
                         <div class=" justify-content-center text-center">
-                            <a href="telalogin.html">Já possuo conta</a>
+                            <a href="index.php">Já possuo conta</a>
                         </div>
                       </form>
 

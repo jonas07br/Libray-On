@@ -11,7 +11,7 @@
       
     </script>
     </html>
-    <body background="fundo.png">
+    <body background="imgs/fundo.png">
         <div class="container fluid">
             <div class="row justify-content-center ">
                 <div class="col-sm-6 p-5 border rounded border-warning position-absolute top-50 start-50 translate-middle bg-light border-3"  >
@@ -19,24 +19,35 @@
                         <h1 class="display-3 text-center">Login</h1>
                         <hr>
                         <div class="row mb-3 justify-content-center text-center">
-                          <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
+                          <label  class="col-sm-2 col-form-label">Email</label>
                           <div class="col-sm-6">
-                            <input type="text" name="email" class="form-control" id="inputPassword3" required>
+                            <input type="text" name="email" class="form-control"  required>
                           </div>
                         </div>
                         <div class="row mb-3 justify-content-center text-center">
-                          <label for="inputPassword3" class="col-sm-2 col-form-label">Senha</label>
+                          <label  class="col-sm-2 col-form-label">Senha</label>
                           <div class="col-sm-6">
-                            <input type="password" name="senha" class="form-control" id="inputPassword3" required>
+                            <input type="password" name="senha" class="form-control"  required>
                           </div>
                         </div>
                         <div class="row mb-3 justify-content-end">
                           <div class="col-sm-2">
                             <button type="submit" name="enviar" class="btn btn-primary">OK</button>
                           </div>
+                          
                         </div>
                         <div class=" justify-content-center text-center">
-                            <a href="telacadastro.html">Não possuo conta</a>
+                          <div class="text-danger">
+                          <?php
+                            if (isset($_GET["s"])){
+                              if($_GET["s"]=="e"){
+                                echo "<p > Usuario ou senha incorretos</p>";
+                              }
+                            }
+                          ?>
+                          </div>
+                        
+                            <a href="telacadastro.php">Não possuo conta</a>
                         </div>
                       </form>
 
