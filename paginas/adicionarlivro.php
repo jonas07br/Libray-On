@@ -2,10 +2,14 @@
 if ( $_SESSION["controle"]!="ok"){
     header("Location:../index.php");
 }
+if ($_SESSION["usertype"]=="user"){
+  header("Location: paguser/telainiciouser.php?s=h");
+}
+
 ?>
-<div class="container-fluid p-5">
+<div class="container-fluid p-3">
   <div class="row  justify-content-center">
-    <div class="col-sm-5 p-5 border border-warning rounded bg-light">
+    <div class="col-sm-5 p-5 border border-info rounded bg-light">
       <h1 class="display-3 text-center">Adicionar Livro</h1>
       <hr>
       <form method="POST" action="processapags/processaaddlivro.php">
@@ -54,15 +58,24 @@ if ( $_SESSION["controle"]!="ok"){
                 Ficção Científica
               </label>
             </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"></label>
+              <textarea class="form-control" placeholder="Descrição" name="descricao" rows="3"></textarea>
+            </div>
           </div>
         </fieldset>
-        <div class="row mb-3 justify-content-center">
-          <div class="col-sm-8 ">
-            <div class="form-floating mb-2">
-              <textarea class="form-control" id="floatingTextarea" name="descricao"></textarea>
-              <label for="floatingTextarea" >Descrição</label>
-            </div>               
-          </div>  
+        <div class="text-center">
+        <?php
+        if (isset($_GET["p"])){
+          if($_GET["p"]=="addok"){
+            echo "<p1 class='text-success'>Livro adicionado!</p1>";
+          }
+          if($_GET["p"]=="adderro"){
+            echo "<p1 class='text-danger'>Livro já cadastrado</p1>";
+          }
+
+        }
+        ?>
         </div>
         <div class="row mb-3 justify-content-end">
           <div class="col-sm-4">
